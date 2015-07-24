@@ -50,6 +50,9 @@ Plug 'scrooloose/syntastic'
 " Install EasyMotion
 Plug 'easymotion/vim-easymotion'
 
+" NERDTree
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""
