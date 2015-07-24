@@ -131,9 +131,8 @@ set hlsearch
 set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""
-" No annoying sounds on errors
-set visualbell 
-set t_vb=
+" No annoying sounds on errors or flash
+set noeb vb t_vb=
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Text, tab, indention related
