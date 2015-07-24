@@ -8,10 +8,6 @@ Plug 'junegunn/vim-easy-align'
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
 " Using git URL
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -23,6 +19,27 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
+
+" Install hybrid color scheme
+Plug 'w0ng/vim-hybrid'
+
+" Install tagbar
+Plug 'majutsushi/tagbar'
+
+" Install CtrlP
+Plug 'kien/ctrlp.vim'
+
+" Install surround
+Plug 'tpope/vim-surround'
+
+" Tab completion
+Plug 'Valloric/YouCompleteMe'
+
+" Auto completion of quotes, parens, brackets, etc
+Plug 'Raimondi/delimitMate'
+
+" Lightline
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -56,6 +73,11 @@ set wildmenu
 syntax on
 syntax enable
 
+""""""""""""""""""""""""""""""""""""""""""""""
+" Lightline
+"let g:lightline = {
+"      \ 'colorscheme': 'hybrid',
+"      \ }
 """"""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme set
 colorscheme hybrid
