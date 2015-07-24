@@ -47,7 +47,15 @@ Plug 'tyru/open-browser.vim'
 " Install Syntastic
 Plug 'scrooloose/syntastic'
 
+
+
 call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Open NERDTree on open
@@ -79,11 +87,6 @@ set wildmenu
 syntax on
 syntax enable
 
-""""""""""""""""""""""""""""""""""""""""""""""
-" Lightline
-"let g:lightline = {
-"      \ 'colorscheme': 'hybrid',
-"      \ }
 """"""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme set
 colorscheme hybrid
