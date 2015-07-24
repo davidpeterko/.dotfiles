@@ -41,6 +41,12 @@ Plug 'Raimondi/delimitMate'
 " Lightline
 Plug 'itchyny/lightline.vim'
 
+" Plugin to open browser from vim: called :OpenBrowser www.google.com
+Plug 'tyru/open-browser.vim'
+
+" Install Syntastic
+Plug 'scrooloose/syntastic'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -136,6 +142,10 @@ set wrap " Wrap lines
 """"""""""""""""""""""""""""""""""""""""""""""
 " Set status line always
 set laststatus=2
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Map control-P to ctrlp
+let g:ctrlp_map = '<c-p>'
 
 
 
