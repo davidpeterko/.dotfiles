@@ -8,6 +8,10 @@ Plug 'junegunn/vim-easy-align'
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
 " Using git URL
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -20,46 +24,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
-" Install hybrid color scheme
-Plug 'w0ng/vim-hybrid'
-
-" Install tagbar
-Plug 'majutsushi/tagbar'
-
-" Install CtrlP
-Plug 'kien/ctrlp.vim'
-
-" Install surround
-Plug 'tpope/vim-surround'
-
-" Tab completion
-Plug 'Valloric/YouCompleteMe'
-
-" Auto completion of quotes, parens, brackets, etc
-Plug 'Raimondi/delimitMate'
-
-" Lightline
-Plug 'itchyny/lightline.vim'
-
-" Plugin to open browser from vim: called :OpenBrowser www.google.com
-Plug 'tyru/open-browser.vim'
-
-" Install Syntastic
-Plug 'scrooloose/syntastic'
-
-" Install EasyMotion
-Plug 'easymotion/vim-easymotion'
-
-" NERDTree
-Plug 'scrooloose/nerdtree'
-
 call plug#end()
-
-""""""""""""""""""""""""""""""""""""""""""""""
-" Lightline
-let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Open NERDTree on open
@@ -131,15 +96,11 @@ set hlsearch
 set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""
-" No annoying sounds on errors or flash
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-"set noerrorbells
-"set novisualbell
-"set vb
-"set t_vb=
-"set t_vb=
-"set tm=500
+" No annoying sounds on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Text, tab, indention related
@@ -153,21 +114,6 @@ set wrap " Wrap lines
 """"""""""""""""""""""""""""""""""""""""""""""
 " Set status line always
 set laststatus=2
-
-""""""""""""""""""""""""""""""""""""""""""""""
-" Map control-P to ctrlp
-let g:ctrlp_map = '<c-p>'
-
-""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic config - user friendly set up
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 
 
