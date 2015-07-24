@@ -132,7 +132,10 @@ set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " No annoying sounds on errors or flash
-set noeb vb t_vb=
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Text, tab, indention related
