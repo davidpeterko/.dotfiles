@@ -47,7 +47,8 @@ Plug 'tyru/open-browser.vim'
 " Install Syntastic
 Plug 'scrooloose/syntastic'
 
-
+" Install EasyMotion
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
