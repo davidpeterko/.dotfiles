@@ -132,10 +132,8 @@ set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " No annoying sounds on errors
-set noerrorbells
-set novisualbell
+set visualbell 
 set t_vb=
-set tm=500
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Text, tab, indention related
