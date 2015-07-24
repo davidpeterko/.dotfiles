@@ -147,6 +147,17 @@ set laststatus=2
 " Map control-P to ctrlp
 let g:ctrlp_map = '<c-p>'
 
+""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic config - user friendly set up
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 
 
