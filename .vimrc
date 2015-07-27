@@ -56,6 +56,9 @@ Plug 'scrooloose/nerdtree'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""
+" Set font
+set guifont=Menlo\ 10
+""""""""""""""""""""""""""""""""""""""""""""""
 " Lightline
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
@@ -83,13 +86,116 @@ nmap <F2> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " This sets the auto completion of vim to behave like BASH terminal
-set wildmode=long:full
+set wildmode=longest:full
 set wildmenu
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Highlight syntax
 syntax on
 syntax enable
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Set 256 colors
+set t_Co=256
+""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-easy-align'
+
+" Group dependencies, vim-snippets depends on ultisnips
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" Using git URL
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+" Plugin options
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+
+" Unmanaged plugin (manually installed and updated)
+Plug '~/my-prototype-plugin'
+
+" Install hybrid color scheme
+Plug 'w0ng/vim-hybrid'
+
+" Install tagbar
+Plug 'majutsushi/tagbar'
+
+" Install CtrlP
+Plug 'kien/ctrlp.vim'
+
+" Install surround
+Plug 'tpope/vim-surround'
+
+" Tab completion
+Plug 'Valloric/YouCompleteMe'
+
+" Auto completion of quotes, parens, brackets, etc
+Plug 'Raimondi/delimitMate'
+
+" Lightline
+Plug 'itchyny/lightline.vim'
+
+" Plugin to open browser from vim: called :OpenBrowser www.google.com
+Plug 'tyru/open-browser.vim'
+
+" Install Syntastic
+Plug 'scrooloose/syntastic'
+
+" Install EasyMotion
+Plug 'easymotion/vim-easymotion'
+
+" NERDTree
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Set font
+set guifont=Menlo\ 10
+""""""""""""""""""""""""""""""""""""""""""""""
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Open NERDTree on open
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle NerdTree
+nmap <F1> :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Open tagbar on open
+autocmd VimEnter * TagbarOpen
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Tag bar toggle
+nmap <F2> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" My settings below
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" This sets the auto completion of vim to behave like BASH terminal
+set wildmode=longest:full
+set wildmenu
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight syntax
+syntax on
+syntax enable
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Set 256 colors
+set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme set
@@ -132,7 +238,6 @@ set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " No annoying sounds on errors or flash
-set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 "set noerrorbells
 "set novisualbell
@@ -168,7 +273,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-
-
 
