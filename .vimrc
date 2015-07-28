@@ -24,6 +24,13 @@ Plug '~/my-prototype-plugin'
 " Install hybrid color scheme
 Plug 'w0ng/vim-hybrid'
 
+" Install zenburn
+Plug 'jnurmine/Zenburn'
+
+" Gotham theme
+Plug 'whatyouhide/vim-gotham'
+
+
 " Install tagbar
 Plug 'majutsushi/tagbar'
 
@@ -61,9 +68,10 @@ call plug#end()
 set guifont=Menlo\ 10
 """"""""""""""""""""""""""""""""""""""""""""""
 " Lightline
-let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ }
+"let g:lightline = {
+""      \ 'colorscheme': 'solarized_light',
+""      \ }
+let g:lightline = { 'colorscheme': 'gotham' }
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Open NERDTree on open
@@ -101,7 +109,7 @@ set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme set
-colorscheme hybrid
+colorscheme gotham
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Sets the line numbers
