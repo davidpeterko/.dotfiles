@@ -30,7 +30,6 @@ Plug 'jnurmine/Zenburn'
 " Gotham theme
 Plug 'whatyouhide/vim-gotham'
 
-
 " Install tagbar
 Plug 'majutsushi/tagbar'
 
@@ -60,6 +59,9 @@ Plug 'easymotion/vim-easymotion'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
+
+" Supertab
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -183,4 +185,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""
+" Remapped o and O
+nmap <Enter> o<ESC>
+nmap <S-Enter> O<ESC>
 
