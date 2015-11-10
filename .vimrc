@@ -67,7 +67,7 @@ call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Set font
-set guifont=Menlo\ 10
+set guifont=Menlo\ 13
 """"""""""""""""""""""""""""""""""""""""""""""
 " Lightline
 "let g:lightline = {
@@ -111,7 +111,7 @@ set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme set
-colorscheme gotham
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Sets the line numbers
